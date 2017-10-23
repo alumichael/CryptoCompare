@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context="com.example.mike4christ.cryptocompare.About">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:src="@mipmap/ic_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:id="@+id/imageView2" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Version 1.0"
+
+        android:id="@+id/textView"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developed @Mightonic(Michael Alu)"
+        android:gravity="center_horizontal"
+        android:id="@+id/textView2"
+        android:layout_marginBottom="174dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/textView"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mike4christ.cryptocompare"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Create_Card">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BitcoinCard.Bitcoin_Card"
+            android:label="Bitcoin"
+            android:parentActivityName=".Create_Card"
+            android:theme="@style/Bitcoin_Theme">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Create_Card" />
+        </activity>
+
+        <activity
+            android:name=".EthereumCard.Ethereum_card"
+            android:label="Ethereum"
+            android:parentActivityName=".Create_Card"
+            android:theme="@style/Ethereum_Theme">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Create_Card" />
+        </activity>
+
+        <activity android:name=".BitcoinCard.BtUser_Convert"
+            android:parentActivityName=".BitcoinCard.Bitcoin_Card"
+            android:label="Conversion"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BitcoinCard.Bitcoin_Card" />
+        </activity>
+
+
+        <activity android:name=".EthereumCard.EtUser_Convert"
+            android:parentActivityName=".EthereumCard.Ethereum_card"
+            android:label="Conversion"
+            android:theme="@style/Ethereum_Theme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EthereumCard.Ethereum_card" />
+
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:parentActivityName=".Create_Card"
+            android:theme="@style/Ethereum_Theme">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Create_Card" />
+        </activity>
+    </application>
+
+</manifest>
